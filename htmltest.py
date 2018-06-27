@@ -87,3 +87,10 @@ import subprocess
 bash_com = 'curl -k -H "Authorization: Bearer xxxxxxxxxxxxxxxx" -H "hawkular-tenant: test" -X GET https://www.example.com/test | python -m json.tool'
 subprocess.Popen(bash_com)
 output = subprocess.check_output(['bash','-c', bash_com])
+
+
+
+import subprocess
+command = 'curl -u username:password -X PUT example.com/data/data1.txt -T /diskless/desktop/file.txt\r\n'
+p = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+out, err = p.communicate()
