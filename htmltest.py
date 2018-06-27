@@ -78,3 +78,12 @@ session.quit()
 
 
 #https://stackoverflow.com/questions/2028517/python-urllib2-progress-hook
+
+
+
+
+import subprocess
+
+bash_com = 'curl -k -H "Authorization: Bearer xxxxxxxxxxxxxxxx" -H "hawkular-tenant: test" -X GET https://www.example.com/test | python -m json.tool'
+subprocess.Popen(bash_com)
+output = subprocess.check_output(['bash','-c', bash_com])
