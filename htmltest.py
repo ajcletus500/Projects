@@ -74,3 +74,7 @@ file = open('download.html','rb')                  # file to send
 session.storbinary('STOR abc/download.html', file)     # send the file
 file.close()                                    # close file and FTP
 session.quit()
+
+
+
+#https://stackoverflow.com/questions/2028517/python-urllib2-progress-hook
